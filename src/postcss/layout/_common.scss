@@ -54,7 +54,7 @@
 	padding-bottom: 20px;
 	
 	@include media('>=375px') {
-		width: 50%;
+		width: 100%;
 		padding: 0 5px 20px;
 	}
 	@include media('>=tablet') {
@@ -72,18 +72,23 @@
 	color: $white;
 	font-size: 12px;
 	line-height: 18px;
-	border-radius: 10px;
+	border-radius: 15px;
 	overflow: hidden;
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-
+    position: relative;//For text absolute position
 	
 
 	&:hover {
 		.text {
 			background: $black;
 		}
+	}
+
+	//Added by Rex. Blocks should be square
+	&:after{
+		min-height: auto;
 	}
 
 	@include media('>=tablet') {
@@ -105,16 +110,34 @@
 		@include animate(background);
 		padding: 8px;   
 		width: 100%;
+		//Added by Rex
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+
+	    h2{
+	    	height: 50px;
+	    }
+
+	    @include media('>=tablet') {
+			h2{
+				height: 70px;
+			}
+		}
 
 		@include media('>=desktop') {
 			padding: 8px 24px 6px;
+			h2{
+				height: 70px;
+			}
 		}
+
 	}
 
 	.title {
 		font-size: 13px;
 		line-height: 15px;
-		display: block;
+		display: block; 
 		margin-bottom: 3px;
 
 		@include media('>=desktop') {
