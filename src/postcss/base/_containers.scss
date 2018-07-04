@@ -1,0 +1,24 @@
+@mixin container-m {
+	width: 100%;
+	max-width: $inner-wrap-m;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+%container-m,
+.wrapper-m {
+	width: 100%;
+	max-width: $inner-wrap-m;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: $inner-wrap-l;
+	padding: 0 30px;
+	margin: 0 auto;
+	@include media('below-small') {
+		padding: 0 15px;
+	}
+}

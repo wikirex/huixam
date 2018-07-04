@@ -1,0 +1,79 @@
+/*clearfix*/
+@mixin clear {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+%clearfix {
+	&:after {
+		display: block;
+		content: '';
+		display: block;
+	}
+}
+
+%listreset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/*text and image*/
+.ellipsis {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.full-img {
+    display: block;
+	width: 100%;
+	height: auto;
+}
+
+.bg-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.block {
+	display: block;
+	width: 100%;
+	height: 100% ;
+}
+
+%inline--middle,
+.inline--middle {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.table {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.full-screen--gray-light {
+	background-color: $white-light;
+	min-height: 100vh;
+}
+
+.line-through {
+	display: inline-block;
+	text-decoration: line-through;
+	padding-right: 15px;
+}

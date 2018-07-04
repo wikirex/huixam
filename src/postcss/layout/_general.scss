@@ -1,0 +1,147 @@
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+a,
+button {
+	cursor: pointer;
+	text-decoration: none;
+	@include animate(opacity visibility background color box-shadow border);
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+	max-width: 1680px;
+
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+
+h1 {
+	font-size: 22px;
+	line-height: 28px;
+	position: relative;
+
+	@include media('>=tablet') {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	@include media('>=desktop') {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	@include media('>=widescreen') {
+		font-size: 37px;
+		line-height: 44px;
+	}
+
+
+	&:before {
+		content: '';
+		width: 30px;
+	}
+}
+
+.heading {
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 30px;
+	margin-bottom: 20px;  
+
+	@include media('>=desktop') {
+		padding: 0 39px;
+		margin: 0 0 39px;
+	}
+
+	h1 {
+		padding: 0 30px;
+		display: inline-block;
+		vertical-align: top;
+		background: $white;
+		position: relative;
+		margin: 0;
+
+		@include media('>=desktop') {
+			padding: 0 73px;
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: $gray;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		height: 1px;
+
+		@include media('>=desktop') {
+			height: 2px;
+		}
+	}
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	background: #f19001;
+	color: $white;
+	min-width: 150px;
+	padding: 5px 15px;
+	font-size: 14px;
+	line-height: 20px;
+	border-radius: 15px;
+	border-color: transparent;
+
+
+	@include media('>=tablet') {
+		padding: 11px 0;
+		font-size: 19px;
+		min-width: 247px;
+		border-radius: 24px;
+		letter-spacing: 2px;
+	}
+
+	&:hover {
+		opacity: 0.7;
+		border-color: transparent;
+		color: $white;
+	}
+}
+
+body {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.btn-holder {
+	padding: 36px 0 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	border: none;
+}
+
+h1 {
+	margin: 0;
+}

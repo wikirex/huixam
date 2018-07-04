@@ -1,0 +1,27 @@
+{
+  "name": "mod",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "tenten creative"
+  ],
+  "description": "mod",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "plugins"
+  ],
+  "license": "MIT",
+  "homepage": "tenten.co",
+  "devDependencies": {
+    "slick.min": "https://raw.githubusercontent.com/kenwheeler/slick/master/slick/slick.min.js",
+    "jquery-2.1.4.min": "http://code.jquery.com/jquery-2.1.4.min.js"
+  }
+}
