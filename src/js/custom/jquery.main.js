@@ -30,6 +30,7 @@ function initCustomHover() {
 // slick init
 function initSlickCarousel() {
 	jQuery('.slider').slick({
+		autoplay:true, 
 		slidesToScroll: 1,
 		rows: 0,
 		arrows: false,
