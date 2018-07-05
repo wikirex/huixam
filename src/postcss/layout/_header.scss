@@ -309,6 +309,7 @@
 		display: block;
 		padding: 8px 15px 8px 40px;
 		position: relative;
+		height: 36px;
 
 		@include media('>=tablet') {
 			padding: 0;

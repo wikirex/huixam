@@ -17,7 +17,13 @@ function initMobileNav() {
 
 // add classes on hover/touch
 function initCustomHover() {
-	jQuery('.user-holder').touchHover({});
+	//jQuery('.user-holder').touchHover({});
+
+	//Click to show/hide sub-menu
+	$('.user-holder').on('click', function(){
+		var $this = $(this);
+		$this.toggleClass('hover');
+	});
 }
 
 
